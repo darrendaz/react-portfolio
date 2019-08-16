@@ -5,6 +5,15 @@ function App() {
   return (
     <div className="App">
       what up
+      <GardensContainer />
+    </div>
+  );
+}
+
+const GardensContainer = () => {
+  return (
+    <div>
+      Gardens Container
     </div>
   );
 }
