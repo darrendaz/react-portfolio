@@ -1,19 +1,12 @@
 import React from 'react';
 import './App.css';
+import GardensContainer from "./containers/gardensContainer";
 
 function App() {
   return (
     <div className="App">
-      what up
+      app container
       <GardensContainer />
-    </div>
-  );
-}
-
-const GardensContainer = () => {
-  return (
-    <div>
-      Gardens Container
     </div>
   );
 }
