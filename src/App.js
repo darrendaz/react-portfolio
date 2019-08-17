@@ -9,18 +9,11 @@ const navigation = () => {
   return (
     <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/">home</Link>
-          </li>
-          <li>
-            <Link to="/gardens">gardens</Link>
-          </li>
-          <li>
-            <Link to="/plants">plants</Link>
-          </li>
-        </ul>
-        <hr />
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/gardens">Gardens</Link>
+          <Link to="/plants">Plants</Link>
+        </nav>
         <Route exact path="/" component={Home} />
         <Route exact path="/gardens" component={GardensContainer} />
         <Route exact path="/plants" component={PlantsContainer} />

@@ -2,7 +2,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      Welcome Home YAY!
+      Welcome to Agro API
     </div>
   )
 }

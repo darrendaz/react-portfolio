@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import Plant from './plant'
 
 class PlantsList extends Component {
-  listHTML = () => {
-    return this.props.plants.map((plant, index) => <li key={index}>Name: {plant.name}</li>)
+  plantList = () => {
+    return this.props.plants.map((plant, index) => <Plant key={index} name={plant.name} />)
   }
 
   render() {
     return (
       <div>
-        {this.listHTML()}
+        {this.plantList()}
       </div>
     )
   }

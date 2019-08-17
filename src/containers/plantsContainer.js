@@ -27,6 +27,9 @@ class PlantsContainer extends Component {
 
 const mapStateToProps = (state) => ({ state })
 
+const mapDispatchToProps = () => {
+
+}
 
 
 export default connect(mapStateToProps)(PlantsContainer)
