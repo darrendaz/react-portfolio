@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import GardenInput from '../components/gardens/gardenInput'
+import GardenFilterInput from '../components/gardens/gardenFilterInput'
 import GardensList from '../components/gardens/gardensList'
 
-export default class
-  GardensContainer extends Component {
+class GardensContainer extends Component {
   state = {
     gardens: []
   }
@@ -17,9 +16,11 @@ export default class
     return (
       <div>
         gardens container
-        <GardenInput />
+        <GardenFilterInput />
         <GardensList gardens={this.state.gardens} />
       </div>
     )
   }
 }
+
+export default GardensContainer

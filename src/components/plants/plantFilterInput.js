@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PlantInput extends React.Component {
+class PlantFilterInput extends React.Component {
   state = {
     text: ""
   }
@@ -11,12 +11,14 @@ class PlantInput extends React.Component {
     })
   }
 
+
+
   render() {
     return (
       <div>
         <form>
-          <label htmlFor='plantInput'>filter input:</label>
-          <input id='plantInput' name='text' type="text" onChange={this.handleOnChange} value={this.state.text} />
+          <label htmlFor='plantFilterInput'>filter input:</label>
+          <input id='plantFilterInput' name='text' type="text" onChange={this.handleOnChange} value={this.state.filter} />
           <button type="submit">Filter</button>
         </form>
       </div>
@@ -24,4 +26,4 @@ class PlantInput extends React.Component {
   }
 }
 
-export default PlantInput
+export default PlantFilterInput

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PlantsList from '../components/plants/plantsList';
-import PlantInput from '../components/plants/plantInput'
+import PlantFilterInput from '../components/plants/plantFilterInput'
 import { connect } from 'react-redux'
 
-class
-  PlantsContainer extends Component {
+class PlantsContainer extends Component {
   state = {
     plants: []
   }
@@ -19,17 +18,15 @@ class
     return (
       <div>
         plants container
-        <PlantInput />
+        <PlantFilterInput />
         <PlantsList plants={this.state.plants} />
       </div>
     )
   }
 }
 
-// const mapStateToProps = (state) => {
-
-// }
+const mapStateToProps = (state) => ({ state })
 
 
 
-export default connect(null)(PlantsContainer)
+export default connect(mapStateToProps)(PlantsContainer)

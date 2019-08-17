@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class PlantsList extends Component {
+class PlantsList extends Component {
   listHTML = () => {
     return this.props.plants.map((plant, index) => <li key={index}>Name: {plant.name}</li>)
   }
@@ -13,3 +13,5 @@ export default class PlantsList extends Component {
     )
   }
 }
+
+export default PlantsList
