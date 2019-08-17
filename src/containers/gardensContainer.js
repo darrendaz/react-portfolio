@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FilterInput from '../components/gardens/filterInput'
+import GardenInput from '../components/gardens/gardenInput'
 import GardensList from '../components/gardens/gardensList'
 
 export default class
@@ -17,7 +17,7 @@ export default class
     return (
       <div>
         gardens container
-        <FilterInput />
+        <GardenInput />
         <GardensList gardens={this.state.gardens} />
       </div>
     )
