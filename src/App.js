@@ -13,10 +13,10 @@ const navigation = () => {
           <Link to="/">Home</Link>
           <Link to="/gardens">Gardens</Link>
           <Link to="/plants">Plants</Link>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/gardens" component={GardensContainer} />
+          <Route exact path="/plants" component={PlantsContainer} />
         </nav>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/gardens" component={GardensContainer} />
-        <Route exact path="/plants" component={PlantsContainer} />
       </div>
     </Router>
   )

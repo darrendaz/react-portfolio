@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import GardenFilterInput from '../components/gardens/gardenFilterInput'
 import GardensList from '../components/gardens/gardensList'
+import { fetchGardens } from '../redux/actions/gardensActions'
 
 class GardensContainer extends Component {
   state = {
@@ -9,10 +10,9 @@ class GardensContainer extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000/api/gardens")
-      .then(res => res.json())
-      .then(gardens => this.setState({ gardens }))
+    this.props.fetchGardens()
   }
+
   render() {
     return (
       <div>
@@ -35,4 +35,4 @@ const mapDispatchToProps = dispatch => ({
   fetchGardens: () => dispatch(fetchGardens())
 })
 
-export default connect(mapStateToProps)(GardensContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(GardensContainer)
