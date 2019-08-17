@@ -3,6 +3,7 @@ import './App.css';
 import GardensContainer from "./containers/gardensContainer";
 import PlantsContainer from "./containers/plantsContainer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import home from './components/home'
 
 const navigation = () => {
   return (
@@ -20,12 +21,14 @@ const navigation = () => {
           </li>
         </ul>
         <hr />
+        <Route exact path="/" component={home} />
         <Route exact path="/gardens" component={GardensContainer} />
         <Route exact path="/plants" component={PlantsContainer} />
       </div>
     </Router>
   )
 }
+
 
 function App() {
   return (
