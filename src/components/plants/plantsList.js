@@ -3,7 +3,13 @@ import Plant from './plant'
 
 class PlantsList extends Component {
   plantList = () => {
-    return this.props.plants.map((plant, index) => <Plant key={index} name={plant.name} />)
+    return this.props.plants.map((plant, index) => {
+      return (
+        <Plant
+          key={index}
+          plant={plant} />
+      )
+    })
   }
 
   render() {
