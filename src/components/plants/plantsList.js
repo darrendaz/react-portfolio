@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 
 export default class PlantsList extends Component {
+  plantsList = () => {
+    return this.props.plants.map((plant, index) => <li key={index}>Name: {plant.name}</li>)
+  }
+
   render() {
+
     return (
       <div>
-        {[1, 2, 3, 4, 5].map(number => <li>{number}</li>)}
+        {this.plantsList()}
       </div>
     )
   }
