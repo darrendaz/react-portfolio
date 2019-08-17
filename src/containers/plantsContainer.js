@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PlantsList from '../components/plants/plantsList';
-import FilterInput from '../components/gardens/filterInput'
+import PlantInput from '../components/plants/plantInput'
 import { connect } from 'react-redux'
 
 class
@@ -19,7 +19,7 @@ class
     return (
       <div>
         plants container
-        <FilterInput />
+        <PlantInput />
         <PlantsList plants={this.state.plants} />
       </div>
     )
