@@ -2,7 +2,7 @@ import React from 'react';
 
 class PlantFilterInput extends React.Component {
   state = {
-    text: ""
+    filter: ""
   }
 
   handleOnChange = (event) => {
@@ -11,14 +11,19 @@ class PlantFilterInput extends React.Component {
     })
   }
 
-
+  handleOnSubmit = (event) => {
+    event.preventDefault()
+    this.setState({
+      filter: ''
+    })
+  }
 
   render() {
     return (
       <div>
         <form>
           <label htmlFor='plantFilterInput'>filter input:</label>
-          <input id='plantFilterInput' name='text' type="text" onChange={this.handleOnChange} value={this.state.filter} />
+          <input id='plantFilterInput' name='filter' type="text" onChange={this.handleOnChange} value={this.state.filter} />
           <button type="submit">Filter</button>
         </form>
       </div>

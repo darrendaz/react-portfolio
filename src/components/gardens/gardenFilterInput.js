@@ -10,6 +10,11 @@ class GardenFilterInput extends React.Component {
       [event.target.name]: event.target.value
     })
   }
+
+  handleOnSubmit = () => {
+
+  }
+
   render() {
     return (
       <div>
