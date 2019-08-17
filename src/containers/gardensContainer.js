@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import GardenInput from '../components/gardenInput'
+import FilterInput from '../components/gardens/filterInput'
+import GardensList from '../components/gardens/gardensList'
 
 export default class
   GardensContainer extends Component {
@@ -7,12 +8,9 @@ export default class
     return (
       <div>
         gardens container
-        <GardenInput />
-
+        <FilterInput />
+        <GardensList />
       </div>
     )
   }
 }
-
-
-
