@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import GardenFilterInput from '../components/gardens/gardenFilterInput'
 import GardensList from '../components/gardens/gardensList'
 
@@ -17,10 +18,21 @@ class GardensContainer extends Component {
       <div>
         gardens container
         <GardenFilterInput />
-        <GardensList gardens={this.state.gardens} />
+        <GardensList gardens={this.props.gardens} />
       </div>
     )
   }
 }
 
-export default GardensContainer
+
+const mapStateToProps = (state) => {
+  return {
+    gardens: state.gardens
+  }
+}
+
+const mapDispatchToProps = () => {
+
+}
+
+export default connect(mapStateToProps)(GardensContainer)
