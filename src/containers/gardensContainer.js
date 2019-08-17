@@ -31,8 +31,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = () => {
-
-}
+const mapDispatchToProps = dispatch => ({
+  fetchGardens: () => dispatch(fetchGardens())
+})
 
 export default connect(mapStateToProps)(GardensContainer)
