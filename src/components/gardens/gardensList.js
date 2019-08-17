@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 
 export default class GardensList extends Component {
+  listHTML = () => {
+    return this.props.gardens.map((garden, index) => <li key={index}>Name: {garden.name}</li>)
+  }
+
   render() {
     return (
       <div>
-        {[1, 2, 3, 4, 5].map(number => <li>{number}</li>)}
+        {this.listHTML()}
       </div>
     )
   }
