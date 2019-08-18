@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { fetchPlants } from '../redux/actions/plantsActions'
 
 class PlantsContainer extends Component {
-
   componentDidMount() {
     this.props.fetchPlants()
   }
