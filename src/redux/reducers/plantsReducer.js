@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case "LOADING_PLANTS":
       return { ...state, loading: true }
     case "FETCH_PLANTS_DONE":
-      return { ...state, loading: false, plants: action.data }
+      return { ...state, loading: false, plants: action.plants }
     default:
       return state
   }

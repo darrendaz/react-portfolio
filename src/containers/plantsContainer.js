@@ -19,6 +19,6 @@ class PlantsContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => (state.plants)
+const mapStateToProps = ({ plants }) => (plants)
 
 export default connect(mapStateToProps, { fetchPlants })(PlantsContainer)
