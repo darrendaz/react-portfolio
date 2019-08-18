@@ -5,18 +5,13 @@ import GardensList from '../components/gardens/gardensList'
 import { fetchGardens } from '../redux/actions/gardensActions'
 
 class GardensContainer extends Component {
-  state = {
-    gardens: []
-  }
-
   componentDidMount() {
     this.props.fetchGardens()
   }
 
   render() {
     return (
-      <div>
-        gardens container
+      <div className="gardensContainer">
         <GardenFilterInput />
         <GardensList gardens={this.props.gardens} />
       </div>
@@ -24,15 +19,7 @@ class GardensContainer extends Component {
   }
 }
 
+const mapStateToProps = (state) => (state.gardens)
 
-const mapStateToProps = (state) => {
-  return {
-    gardens: state.gardens
-  }
-}
 
-const mapDispatchToProps = dispatch => ({
-  fetchGardens: () => dispatch(fetchGardens())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(GardensContainer)
+export default connect(mapStateToProps, { fetchGardens })(GardensContainer)

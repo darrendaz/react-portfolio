@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
+import Garden from '../gardens/garden'
 
-export default class GardensList extends Component {
-
-  listHTML = (props) => {
-    return (
-      props.gardens.map((garden, index) => <p key={index}>Name: {garden.name}</p>)
-    )
-  }
-
+class GardensList extends Component {
   render() {
     return (
-      <div>
-        {this.listHTML}
-      </div>
+      this.props.gardens.map((garden, index) => {
+        return (
+          <Garden key={index} garden={garden} />
+        )
+      })
     )
   }
 }
+
+export default GardensList

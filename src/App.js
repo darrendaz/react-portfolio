@@ -1,34 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import GardensContainer from "./containers/gardensContainer";
-import PlantsContainer from "./containers/plantsContainer";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from './components/home'
+import Nav from './components/nav/nav'
 
-const navigation = () => {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/gardens">Gardens</Link>
-          <Link to="/plants">Plants</Link>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/gardens" component={GardensContainer} />
-          <Route exact path="/plants" component={PlantsContainer} />
-        </nav>
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
       </div>
-    </Router>
-  )
-}
-
-
-function App() {
-  return (
-    <div className="App">
-      {navigation()}
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

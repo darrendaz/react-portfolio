@@ -3,15 +3,15 @@ const initialState = {
   gardens: []
 }
 
-export default function gardensReducer(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_GARDEN':
       console.log('adding garden')
-      return state
+      return { ...state, loading: true }
     case "LOADING_GARDENS":
       return { ...state, loading: true }
-    case "FETCH_GARDENS":
-      return { ...state, loading: false, gardens: action.gardens }
+    case "FETCH_GARDENS_DONE":
+      return { ...state, loading: false, gardens: action.data }
     default:
       return state
   }

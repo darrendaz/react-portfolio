@@ -17,7 +17,6 @@ class PlantsContainer extends Component {
   render() {
     return (
       <div>
-        plants container
         <PlantFilterInput />
         <PlantsList plants={this.state.plants} />
       </div>
@@ -25,7 +24,7 @@ class PlantsContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ state })
+const mapStateToProps = (state) => (state.plants)
 
 const mapDispatchToProps = () => {
 
