@@ -1,8 +1,10 @@
 import React from 'react'
 import GardensContainer from "../../containers/gardensContainer";
 import PlantsContainer from "../../containers/plantsContainer";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../home'
+import Strains from '../strains'
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export const Nav = () => {
   return (
@@ -18,7 +20,7 @@ export const Nav = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/gardens" component={GardensContainer} />
           <Route exact path="/plants" component={PlantsContainer} />
-          <Route exact path="/strain/new" component={PlantsContainer} />
+          <Route exact path="/strains/new" component={Strains} />
         </div>
       </Router>
     </div>
