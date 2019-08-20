@@ -27,3 +27,13 @@ nav,
 nav a {
   margin: 2em;
 }
+
+div.nav-container {
+  text-align: center;
+}
+
+div,
+li {
+  padding: 0em 1em;
+  text-align: left;
+}

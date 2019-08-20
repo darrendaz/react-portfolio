@@ -9,12 +9,12 @@ export const Nav = () => {
   return (
     <div>
       <Router>
-        <div>
+        <div className="nav-container">
           <nav>
             <Link to="/" >Home</Link>
             <Link to="/gardens">Gardens</Link>
             <Link to="/plants">Plants</Link>
-            <Link to="/strains">Make Your Own Strain</Link>
+            <Link to="/strains">Create a Strain</Link>
           </nav>
           <Route exact path="/" component={Home} />
           <Route exact path="/gardens" component={GardensContainer} />

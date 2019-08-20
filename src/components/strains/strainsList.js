@@ -1,21 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class StrainsList extends Component {
-  plantList = () => {
-    return this.props.strains.map((strain) => {
-      return (
-        <p>{strain.name}</p>
-      )
-    })
-  }
-
-  render() {
+const StrainsList = (props) => {
+  return props.strains.map((strain, index) => {
     return (
-      <div>
-        {this.plantList()}
-      </div>
+      <p key={index}>{strain.name}</p>
     )
-  }
+  })
 }
 
 export default StrainsList

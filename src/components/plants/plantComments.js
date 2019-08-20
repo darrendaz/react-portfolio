@@ -4,7 +4,7 @@ const PlantComments = (props) => {
   return (
     <div>
       <ul>
-        {props.comments.map(comment => <li>{comment.contents}</li>)}
+        {props.comments.map((comment) => <li key={comment.id}>{comment.contents}</li>)}
       </ul>
     </div>
 

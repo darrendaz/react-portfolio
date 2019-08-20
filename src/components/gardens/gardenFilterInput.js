@@ -20,7 +20,12 @@ class GardenFilterInput extends React.Component {
       <div>
         <form>
           <label htmlFor='gardenFilterInput'>filter input:</label>
-          <input id='gardenFilterInput' name='filter' type="text" onChange={this.handleOnChange} value={this.state.filter} />
+          <input
+            id='gardenFilterInput'
+            name='filter'
+            type="text"
+            onChange={this.handleOnChange}
+            value={this.state.filter} />
           <button type="submit">Filter</button>
         </form>
       </div >

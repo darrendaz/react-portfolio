@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import StrainsList from '../components/strains/strainsList'
-// // import StrainForm from '../components/strains/strainForm'
 import { fetchStrains } from '../redux/actions/strainsActions'
 
 class StrainsContainer extends Component {
@@ -9,10 +8,31 @@ class StrainsContainer extends Component {
     this.props.fetchStrains()
   }
 
+  handleStrainNameChange = (event) => {
+    this.props.setName(event.target.value)
+  }
+
+  handleStrainNameSubmit = (event) => {
+    event.preventDefault()
+    this.props.createStrain(this.props.name)
+  }
+
   render() {
     return (
       <div>
-        <StrainsList strains={this.props.strains} />
+        <div>
+          <form onSubmit={this.handleStrainNameSubmit}>
+            <label htmlFor='strainName'>Strain Name:</label>
+            <input
+              id='strainName'
+              name='name'
+              type="text"
+              onChange={this.handleStrainNameChange}
+              value={this.props.name} />
+            <button type="submit">Create Strain</button>
+          </form>
+        </div>
+        <StrainsList strains={this.props.strains.reverse()} />
       </div>
     )
   }

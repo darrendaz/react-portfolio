@@ -1,24 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Plant from './plant'
 
-class PlantsList extends Component {
-  plantList = () => {
-    return this.props.plants.map((plant, index) => {
-      return (
-        <Plant
-          key={index}
-          plant={plant} />
-      )
-    })
-  }
-
-  render() {
+const PlantsList = (props) => {
+  return props.plants.map((plant, index) => {
     return (
-      <div>
-        {this.plantList()}
-      </div>
+      <Plant
+        key={index}
+        plant={plant} />
     )
-  }
+  })
 }
 
 export default PlantsList
