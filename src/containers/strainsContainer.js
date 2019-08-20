@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import StrainsList from '../components/strains/strainsList'
+import { connect } from 'react-redux'
 import { fetchStrains, setName, createStrain } from '../redux/actions/strainsActions'
 
 class StrainsContainer extends Component {
@@ -61,27 +61,23 @@ class StrainsContainer extends Component {
   render() {
     return (
       <div>
-        <div>
-          <label htmlFor='strainFilterInput'>Find by name: </label>
+        <label htmlFor='strainFilterInput'>Find by name: </label>
+        <input
+          id='strainFilterInput'
+          name='filter'
+          type="text"
+          onChange={e => this.handleFilterChange(e)}
+          value={this.state.filter} />
+        <form onSubmit={this.handleStrainNameSubmit}>
+          <label htmlFor='strainName'>Strain Name:</label>
           <input
-            id='strainFilterInput'
-            name='filter'
+            id='strainName'
+            name='name'
             type="text"
-            onChange={e => this.handleFilterChange(e)}
-            value={this.state.filter} />
-        </div>
-        <div>
-          <form onSubmit={this.handleStrainNameSubmit}>
-            <label htmlFor='strainName'>Strain Name:</label>
-            <input
-              id='strainName'
-              name='name'
-              type="text"
-              onChange={this.handleStrainNameChange}
-              value={this.props.name} />
-            <button type="submit">Create Strain</button>
-          </form>
-        </div>
+            onChange={this.handleStrainNameChange}
+            value={this.props.name} />
+          <button type="submit">Create Strain</button>
+        </form>
         <StrainsList strains={this.filterStrains()} />
       </div>
     )
