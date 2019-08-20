@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import GardenFilterInput from '../components/gardens/gardenFilterInput'
+// import GardenFilterInput from '../components/gardens/gardenFilterInput'
 import GardensList from '../components/gardens/gardensList'
 import { fetchGardens } from '../redux/actions/gardensActions'
 
@@ -12,7 +12,7 @@ class GardensContainer extends Component {
   render() {
     return (
       <div className="gardensContainer">
-        <GardenFilterInput />
+        {/* <GardenFilterInput /> */}
         <GardensList gardens={this.props.gardens} />
       </div>
     )

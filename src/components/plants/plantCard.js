@@ -5,10 +5,11 @@ const PlantCard = (props) => {
   return (
     <div>
       <hr />
-      <p>{props.plant.name}</p>
-      <p>{props.plant.id}</p>
-      <p>{props.plant.species}</p>
-      <p>{props.plant.strain}</p>
+      <h1>name: {props.plant.name}</h1>
+      <p>id: {props.plant.id}</p>
+      <p>species: {props.plant.species}</p>
+      <p>strain: {props.plant.strain}</p>
+      <h4>Comments:</h4>
       <PlantCommentsList comments={props.plant.comments} />
       <hr />
     </div>
