@@ -56,7 +56,7 @@ $ rails s -p=4001
 
 [http://localhost:4001](http://localhost:4001)
 
-# FInally: Fork and clone `master` branch from `rails-api`
+## FInally: Fork and clone `master` branch from `rails-api`
 
 https://github.com/darrendaz/react-portfolio
 
