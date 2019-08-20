@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import StrainsList from '../components/strains/strainsList'
-import { fetchStrains } from '../redux/actions/strainsActions'
+import { fetchStrains, setName, createStrain } from '../redux/actions/strainsActions'
 
 class StrainsContainer extends Component {
   componentDidMount() {
@@ -40,4 +40,4 @@ class StrainsContainer extends Component {
 
 const mapStateToProps = ({ strains }) => (strains)
 
-export default connect(mapStateToProps, { fetchStrains })(StrainsContainer)
+export default connect(mapStateToProps, { fetchStrains, setName, createStrain })(StrainsContainer)

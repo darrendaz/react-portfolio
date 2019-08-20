@@ -2,9 +2,16 @@ export const fetchStrains = () => dispatch => {
   return fetch("http://localhost:4001/strains")
     .then(res => res.json())
     .then(strains => dispatch({
-      type: "FETCH_STRAINS_DONE",
-      strains
+      type: "FETCH_STRAINS_SUCCESS",
+      strains: strains.reverse()
     }))
+}
+
+export const setName = name => {
+  return {
+    type: "SET_NAME_SUCCESS",
+    name
+  }
 }
 
 const addStrain = strain => {
@@ -29,7 +36,7 @@ export const createStrain = strain => {
       },
       body: JSON.stringify({
         strain: {
-          name: strain.name
+          name: strain
         }
       })
     }).then(res => res.json())
