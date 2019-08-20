@@ -1,5 +1,4 @@
 const initialState = {
-  loading: false,
   plants: []
 }
 
@@ -11,7 +10,7 @@ export default (state = initialState, action) => {
     // case "LOADING_PLANTS":
     //   return { ...state, loading: true }
     case "FETCH_PLANTS_DONE":
-      return { ...state, loading: false, plants: action.plants }
+      return { ...state, plants: action.plants }
     default:
       return state
   }

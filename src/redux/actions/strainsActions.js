@@ -44,6 +44,5 @@ export const createStrain = strain => {
         dispatch(addStrain(strain))
         dispatch(resetStrainForm())
       })
-      .catch(error => console.log(error))
   }
 }
