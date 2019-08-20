@@ -66,6 +66,13 @@ Do a `npm start` or `yarn start`
 
 [http://localhost:3000](http://localhost:3000)
 
+You should be able to see 4 navigation links on the page:
+
+- Home
+- Gardens
+- Plants
+- Create a Strain
+
 Enjoy! 🙂
 
 ## Built With
