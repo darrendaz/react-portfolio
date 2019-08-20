@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import GardenFilterInput from '../components/gardens/gardenFilterInput'
 import GardensList from '../components/gardens/gardensList'
 import { fetchGardens } from '../redux/actions/gardensActions'
 
