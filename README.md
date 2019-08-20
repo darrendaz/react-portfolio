@@ -1,4 +1,4 @@
-# First: Fork and clone `api-fix` branch from `rails-agro-project`
+## First: Fork and clone `api-fix` branch from `rails-agro-project`
 
 https://github.com/darrendaz/rails-portfolio-project/tree/api-fix
 
@@ -28,7 +28,7 @@ $ rails s -p=4000
 
 [http://localhost:4000](http://localhost:4000)
 
-# Next: Fork and clone `master` branch from `rails-api`
+## Next: Fork and clone `master` branch from `rails-api`
 
 https://github.com/darrendaz/rails-api
 
