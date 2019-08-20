@@ -1,3 +1,83 @@
+# First: Fork and clone `api-fix` branch from `rails-agro-project`
+
+https://github.com/darrendaz/rails-portfolio-project/tree/api-fix
+
+A simple garden and plant tracking web application with RESTful routes.
+
+You will need this running in order for the `GET` requests of Gardens and Plants REST API.
+
+Clone the repository down to your local environment using `git clone <repo>`
+
+In the project directory in Terminal, do a `bundle install` command to install dependencies.
+
+```
+$ bundle install
+```
+
+Create the database using 'rake db:migrate' command.
+
+```
+$ rake db:migrate
+```
+
+Start up the app with `rails s -p=4000` command
+
+```
+$ rails s -p=4000
+```
+
+[http://localhost:4000](http://localhost:4000)
+
+# Next: Fork and clone `master` branch from `rails-api`
+
+https://github.com/darrendaz/rails-api
+
+An add-on REST API that uses the Faker gem to generate dummy data and allows react to make a POST request persisting a new item into the database.
+
+Clone the repository down to your local environment using `git clone <repo>`
+
+In the project directory in a new terminal window/tab, do a `bundle install` command to install dependencies.
+
+```
+$ bundle install
+```
+
+Create the database using 'rake db:migrate' command.
+
+```
+$ rake db:migrate
+```
+
+Start up the app with `rails s -p=4001` command
+
+```
+$ rails s -p=4001
+```
+
+[http://localhost:4001](http://localhost:4001)
+
+# FInally: Fork and clone `master` branch from `rails-api`
+
+https://github.com/darrendaz/react-portfolio
+
+This is the react front end focusing on implementation of container and presentational components with React and Redux.
+
+Do a `npm start` or `yarn start`
+
+[http://localhost:3000](http://localhost:3000)
+
+Enjoy! 🙂
+
+## Built With
+
+- [Ruby on Rails](https://guides.rubyonrails.org/)
+- [React](https://reactjs.org/)
+- [React-Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Redux](https://redux.js.org/)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+
+## Footnotes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -36,33 +116,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
