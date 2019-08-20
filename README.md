@@ -1,3 +1,7 @@
+# REACT PORTFOLIO PROJECT
+
+This project makes use of two REST APIs built with Ruby on Rails and a front-end built with React in order to showcase patterns and practices learned through Flatiron.
+
 ## First: Fork and clone `api-fix` branch from `rails-agro-project`
 
 https://github.com/darrendaz/rails-portfolio-project/tree/api-fix
