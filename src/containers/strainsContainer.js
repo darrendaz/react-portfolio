@@ -14,6 +14,7 @@ class StrainsContainer extends Component {
 
   handleStrainNameSubmit = (event) => {
     event.preventDefault()
+    event.stopPropagation()
     this.props.createStrain(this.props.name)
   }
 
