@@ -1,10 +1,10 @@
 import React from 'react'
-import Garden from '../gardens/garden'
+import GardenCard from './gardenCard'
 
 const GardensList = (props) => {
   return props.gardens.map((garden, index) => {
     return (
-      <Garden key={index} garden={garden} />
+      <GardenCard key={index} garden={garden} />
     )
   })
 }

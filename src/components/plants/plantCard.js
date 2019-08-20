@@ -1,7 +1,7 @@
 import React from 'react';
-import PlantComments from './plantComments'
+import PlantCommentsList from './plantComments'
 
-const Plant = (props) => {
+const PlantCard = (props) => {
   return (
     <div>
       <hr />
@@ -9,11 +9,10 @@ const Plant = (props) => {
       <p>{props.plant.id}</p>
       <p>{props.plant.species}</p>
       <p>{props.plant.strain}</p>
-      <PlantComments comments={props.plant.comments} />
+      <PlantCommentsList comments={props.plant.comments} />
       <hr />
     </div>
-
   )
 }
 
-export default Plant
+export default PlantCard

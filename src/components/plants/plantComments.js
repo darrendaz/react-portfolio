@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlantComments = (props) => {
+const PlantCommentsList = (props) => {
   return (
     <div>
       <ul>
@@ -11,4 +11,4 @@ const PlantComments = (props) => {
   )
 }
 
-export default PlantComments
+export default PlantCommentsList

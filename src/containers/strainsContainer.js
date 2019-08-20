@@ -32,7 +32,7 @@ class StrainsContainer extends Component {
             <button type="submit">Create Strain</button>
           </form>
         </div>
-        <StrainsList strains={this.props.strains.reverse()} />
+        <StrainsList strains={this.props.strains} />
       </div>
     )
   }

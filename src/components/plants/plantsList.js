@@ -1,5 +1,5 @@
 import React from 'react'
-import Plant from './plant'
+import Plant from './plantCard'
 
 const PlantsList = (props) => {
   return props.plants.map((plant, index) => {

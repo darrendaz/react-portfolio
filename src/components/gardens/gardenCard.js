@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Garden = (props) => {
+const GardenCard = (props) => {
   return (
     <div>
       <hr />
@@ -13,4 +13,4 @@ const Garden = (props) => {
   )
 }
 
-export default Garden
+export default GardenCard

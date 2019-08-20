@@ -2,7 +2,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      Welcome to Agro API
+      <h1>Welcome to AgroWeGro API</h1>
     </div>
   )
 }
