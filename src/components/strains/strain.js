@@ -1,25 +1,39 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { incrementStrainLikes } from '../../redux/actions/strainsActions'
 
-export default class strain extends Component {
+class Strain extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0
+      likes: props.likes
     }
   }
 
   handleIncrementLikes = (event) => {
+    event.preventDefault()
+    this.props.incrementStrainLikes(this.props.strain)
     this.setState({
-      count: this.state.count + 1
+      likes: this.state.likes + 1
     })
   }
 
   render() {
     return (
-      <div>
-        <p>{this.props.strain.name} <button onClick={this.handleIncrementLikes} value={this.state.count}>{this.state.count}</button></p>
+      <div key={this.props.id}>
+        <p>
+          {this.props.strain.name}
+          <button
+            onClick={this.handleIncrementLikes} value={this.props.likes}>
+            {this.state.likes}
+          </button>
+        </p>
       </div>
     )
   }
 }
+
+const mapStateToProps = (strain) => (strain)
+
+export default connect(mapStateToProps, { incrementStrainLikes })(Strain)

@@ -2,9 +2,9 @@ import React from 'react'
 import Strain from './strain'
 
 const StrainsList = (props) => {
-  return props.strains.map((strain, index) => {
+  return props.strains.map((strain) => {
     return (
-      <Strain key={index} strain={strain} />
+      <Strain key={strain.id} strain={strain} likes={strain.likes} />
     )
   })
 }

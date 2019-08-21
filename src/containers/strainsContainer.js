@@ -79,7 +79,7 @@ class StrainsContainer extends Component {
             value={this.props.name} />
           <button type="submit">Create Strain</button>
         </form>
-        <StrainsList strains={this.filterStrains()} handleIncrement={this.handleIncrement} count={this.state.count} />
+        <StrainsList strains={this.filterStrains()} />
       </div>
     )
   }

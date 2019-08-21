@@ -9,7 +9,6 @@ const GardenCard = (props) => {
       <p>Number of plants:{props.garden.plants.length}</p>
       <hr />
     </div>
-
   )
 }
 

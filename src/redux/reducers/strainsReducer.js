@@ -1,5 +1,6 @@
 const initialState = {
   name: "",
+  likes: 0,
   strains: []
 }
 
@@ -13,6 +14,8 @@ export default (state = initialState, action) => {
       return { ...state, name: action.name }
     case "RESET_STRAIN_FORM":
       return { ...state, name: "" }
+    case "UPDATE_STRAIN_SUCCESS":
+      return { ...state, likes: action.likes }
     default:
       return state
   }

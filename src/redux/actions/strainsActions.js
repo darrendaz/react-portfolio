@@ -46,3 +46,34 @@ export const createStrain = strain => {
       })
   }
 }
+
+const updateStrain = strain => {
+  return {
+    type: "UPDATE_STRAIN_SUCCESS",
+    strain
+  }
+}
+
+export const incrementStrainLikes = strain => {
+  const URL = "http://localhost:4001/strains/" + strain.id
+  const incremented = ++strain.likes
+
+  return dispatch => {
+    fetch(URL, {
+      method: "PATCH",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        strain: {
+          name: strain.name,
+          likes: incremented
+        }
+      })
+    }).then(res => res.json())
+      .then(strain => {
+        dispatch(updateStrain(strain))
+      })
+  }
+}
