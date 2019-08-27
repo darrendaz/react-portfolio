@@ -24,15 +24,6 @@ class StrainsContainer extends Component {
     })
   }
 
-  filterPlants = () => {
-    const filteredPlants = this.props.plants.filter(plant => plant.name === this.state.filter)
-    if (this.state.filter.length > 0) {
-      return filteredPlants
-    } else {
-      return this.props.plants
-    }
-  }
-
   handleStrainNameChange = (event) => {
     this.props.setName(event.target.value)
   }
