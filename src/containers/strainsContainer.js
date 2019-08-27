@@ -8,8 +8,7 @@ class StrainsContainer extends Component {
     super(props);
 
     this.state = {
-      filter: '',
-      count: 0
+      filter: ''
     }
   }
 
